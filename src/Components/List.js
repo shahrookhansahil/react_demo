@@ -1,12 +1,16 @@
 import React from 'react'
-
-const List = () => {
+import DeleteIcon from '@mui/icons-material/Delete';
+import Button from '@mui/material/Button';
+const List = ({name, email, index}) => {
   return (
     <div className='list'>
-        <h4>Name</h4>
-        <h4>Email</h4>
-        <h4>Remove</h4>
-    </div>
+        <h4>{name}</h4>
+        <h4>{email}</h4>
+        <Button color="error">
+            <DeleteIcon/>
+        </Button>
+       
+    </div> 
   )
 }
 

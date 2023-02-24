@@ -18,7 +18,7 @@ h1 {
 .data {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 25px;
   width: 100%;
   align-items: center;
 }
@@ -28,6 +28,6 @@ h1 {
   width: 50%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-h4{
+h4, p{
   margin: 10px;
 }
