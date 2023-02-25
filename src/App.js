@@ -8,13 +8,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { useState } from 'react';
 
 function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [form, setForm] = useState("");
   const [data, setData] = useState([]);
   const addData = () => {
-    setData([...data, {name, email}])
-    setName("")
-    setEmail("")
+    setData([...data, form])
+    setForm({})
+    
   }
 
   const removeData = (index) => {
@@ -29,15 +28,15 @@ function App() {
       <div className='form'>
           <Stack direction="row" spacing={2}>
               <TextField
-                  value={name}
-                  onChange = {(e) => setName(e.target.value)}
+                  value={form.name}
+                  onChange = {(e) => setForm({...form,name: e.target.value})}
                   id="outlined-basic" 
                   label="Name" 
                   variant="outlined" 
                 />
               <TextField 
-                  value={email} 
-                  onChange ={(e) => setEmail(e.target.value)}
+                  value={form.email} 
+                  onChange = {(e) => setForm({...form,email: e.target.value})}
                   id="outlined-basic" 
                   label="Email" 
                   variant="outlined" 
