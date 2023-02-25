@@ -5,22 +5,23 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [form, setForm] = useState("");
   const [data, setData] = useState([]);
   const addData = () => {
     setData([...data, form])
-    setForm({})
-    
+    setForm({})   
   }
-
   const removeData = (index) => {
     let arr = data;
     arr.splice(index,1);
     setData([...arr]);
   }
+  useEffect(() =>{
+    window.alert("useEffect call")
+  }, [data])
 
   return (
     <div className="App">
