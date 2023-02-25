@@ -1,5 +1,5 @@
 import React from 'react'
-import DeleteIcon from '@mui/icons-material/Delete';
+ 
 import Button from '@mui/material/Button';
 const List = ({name, email, index}) => {
   return (
